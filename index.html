@@ -1,14 +1,17 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
-  <meta name="description" content="A minimal browser-based QQ Music local file unlock tool." />
-  <title>QQ Music Unlock</title>
-  <link rel="stylesheet" href="./style.css" />
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark"><meta name="description" content="A minimal browser-based QQ Music local file unlock tool.">
+<title>QQ Music Unlock</title><link rel="stylesheet" href="./style.css">
 </head>
-<body>
-  <main class="shell">
-    <header class="hero">
-      <div
+<body><main class="shell">
+<header class="hero"><div><p class="eyebrow">LOCAL · BROWSER ONLY</p><h1>QQ Music Unlock</h1><p class="lead">一个极简的 QQ 音乐本地文件解锁工具。旧格式可直接在浏览器中处理；新版 musicex 文件可手动提供 EKey，或使用 Moufang 网站完整版。</p></div><a class="site-link" href="https://moufang.xyz/#/music" target="_blank" rel="noreferrer">打开网站完整版 ↗</a></header>
+<section class="card"><div id="dropZone" class="drop-zone" tabindex="0"><div class="drop-icon">♫</div><h2>把 QQ 音乐文件拖到这里</h2><p>或点击选择文件，可一次选择多个</p><input id="fileInput" type="file" multiple hidden accept=".mflac,.mgg,.qmc0,.qmc2,.qmc3,.qmcflac,.qmcogg,.tkm,.bkcmp3,.bkcflac,.tm0,.tm2,.tm3,.tm6"><button id="chooseBtn" class="primary" type="button">选择文件</button></div>
+<div class="ekey-box"><label for="ekeyInput">新版 musicex：可选手动填写 EKey</label><textarea id="ekeyInput" rows="3" spellcheck="false" placeholder="新版 .mflac/.mgg 若没有内嵌密钥，需要对应歌曲的 EKey。旧格式无需填写。"></textarea><p>不知道 EKey 或需要账号自动获取？使用 <a href="https://moufang.xyz/#/music" target="_blank" rel="noreferrer">Moufang 网站完整版</a>。</p></div>
+<div class="support"><strong>支持：</strong> .mflac · .mgg · .qmc0 · .qmc2 · .qmc3 · .qmcflac · .qmcogg · .tkm · .bkcmp3 · .bkcflac · .tm0/.tm2/.tm3/.tm6</div></section>
+<section class="card"><div class="section-title"><h2>处理结果</h2><button id="clearBtn" class="ghost" type="button">清空</button></div><div id="emptyState" class="empty">还没有文件。</div><div id="results" class="results"></div></section>
+<footer><span>仅用于处理你有权访问、备份或转换的文件。</span><a href="https://moufang.xyz/#/music" target="_blank" rel="noreferrer">moufang.xyz/#/music</a></footer>
+</main>
+<script src="https://cdn.jsdelivr.net/gh/mou-fang/Multifunctional-Personal-Blog@main/claudeOne/js/qq-music-decrypt.js"></script>
+<script src="./app.js"></script></body></html>
